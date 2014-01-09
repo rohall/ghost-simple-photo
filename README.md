@@ -9,6 +9,7 @@ Simply create a new post with an image as the first piece of content.  You may a
 
 In your theme:
 Use the following code to display only an image for each post
+
     {{#foreach posts}}
         {{content words="0"}}
     {{/foreach}}
