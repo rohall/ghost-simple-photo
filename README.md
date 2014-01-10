@@ -2,19 +2,18 @@
 
 The simple theme for photo blogging with [Ghost](http://github.com/tryghost/ghost/).
 
-### If you're an editor / just want to post photos
+### For Editors who just want to post photos
 
 Install the theme and create a new post with an image as the first piece of content.  You may add additional content under the image.  It will be displayed on the posts page, but not on the listing page.
 
 
-### If you're a theme developer: How to display photos only in a Ghost post listing
+### For Developers who want to display only images for post listings
 
 Use the following code to display only an image for each post
 
     {{#foreach posts}}
         {{content words="0"}}
     {{/foreach}}
-
 
 The trick here is to request the full content of the post, but limit it to 0 words.  Since the image tag is the first element in the post (and Ghost wont count HTML tags/truncate them) it is still displayed.
 
